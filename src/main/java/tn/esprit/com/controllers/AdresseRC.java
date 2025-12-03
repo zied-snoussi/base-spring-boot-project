@@ -1,5 +1,6 @@
 package tn.esprit.com.controllers;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -12,6 +13,7 @@ import java.util.List;
 @RestController
 @AllArgsConstructor
 @RequestMapping("adresse")
+@Tag(name = "Address Management", description = "APIs for managing addresses")
 public class AdresseRC {
 
     AdresseService serviceAdresse;
