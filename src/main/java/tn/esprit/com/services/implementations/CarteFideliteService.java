@@ -1,10 +1,14 @@
 package tn.esprit.com.services.implementations;
 
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 import tn.esprit.com.entities.CarteFidelite;
 import tn.esprit.com.services.interfaces.ICarteFideliteService;
 
 import java.util.List;
 
+@Service
+@AllArgsConstructor
 public class CarteFideliteService implements ICarteFideliteService {
     @Override
     public CarteFidelite add(CarteFidelite entity) {

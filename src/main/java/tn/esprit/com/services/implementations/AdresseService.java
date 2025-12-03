@@ -1,10 +1,14 @@
 package tn.esprit.com.services.implementations;
 
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 import tn.esprit.com.entities.Adresse;
 import tn.esprit.com.services.interfaces.IAdresseService;
 
 import java.util.List;
 
+@Service
+@AllArgsConstructor
 public class AdresseService implements IAdresseService {
     @Override
     public Adresse add(Adresse entity) {

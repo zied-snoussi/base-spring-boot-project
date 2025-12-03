@@ -1,10 +1,14 @@
 package tn.esprit.com.services.implementations;
 
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 import tn.esprit.com.entities.Article;
 import tn.esprit.com.services.interfaces.IArticleService;
 
 import java.util.List;
 
+@Service
+@AllArgsConstructor
 public class ArticleService implements IArticleService {
     @Override
     public Article add(Article entity) {

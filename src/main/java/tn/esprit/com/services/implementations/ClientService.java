@@ -1,10 +1,14 @@
 package tn.esprit.com.services.implementations;
 
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 import tn.esprit.com.entities.Client;
 import tn.esprit.com.services.interfaces.IClientService;
 
 import java.util.List;
 
+@Service
+@AllArgsConstructor
 public class ClientService implements IClientService {
     @Override
     public Client add(Client entity) {

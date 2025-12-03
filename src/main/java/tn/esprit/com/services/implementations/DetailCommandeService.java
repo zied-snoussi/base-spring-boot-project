@@ -1,10 +1,14 @@
 package tn.esprit.com.services.implementations;
 
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 import tn.esprit.com.entities.Detail_Commande;
 import tn.esprit.com.services.interfaces.IDetailCommandeService;
 
 import java.util.List;
 
+@Service
+@AllArgsConstructor
 public class DetailCommandeService implements IDetailCommandeService {
     @Override
     public Detail_Commande add(Detail_Commande entity) {

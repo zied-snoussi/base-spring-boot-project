@@ -1,10 +1,14 @@
 package tn.esprit.com.services.implementations;
 
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 import tn.esprit.com.entities.Promotion;
 import tn.esprit.com.services.interfaces.IPromotionService;
 
 import java.util.List;
 
+@Service
+@AllArgsConstructor
 public class PromotionService implements IPromotionService {
     @Override
     public Promotion add(Promotion entity) {

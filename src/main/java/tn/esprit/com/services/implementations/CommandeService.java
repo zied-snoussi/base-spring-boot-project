@@ -1,10 +1,14 @@
 package tn.esprit.com.services.implementations;
 
+import lombok.AllArgsConstructor;
+import org.springframework.stereotype.Service;
 import tn.esprit.com.entities.Commande;
 import tn.esprit.com.services.interfaces.ICommandeService;
 
 import java.util.List;
 
+@Service
+@AllArgsConstructor
 public class CommandeService implements ICommandeService {
     @Override
     public Commande add(Commande entity) {
