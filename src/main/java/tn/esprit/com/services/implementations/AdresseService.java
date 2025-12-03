@@ -36,22 +36,22 @@ public class AdresseService implements IAdresseService {
 
     @Override
     public Adresse update(Adresse entity) {
-        return null;
+        return adresseRepository.save(entity);
     }
 
     @Override
     public void delete(Adresse entity) {
-
+        adresseRepository.delete(entity);
     }
 
     @Override
     public void deleteAll() {
-
+        adresseRepository.deleteAll();
     }
 
     @Override
     public void deleteById(Long aLong) {
-
+        adresseRepository.deleteById(aLong);
     }
 
     @Override

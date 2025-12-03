@@ -36,4 +36,10 @@ public class AdresseRC {
         AdresseDto result = adresseMapper.toDTO(serviceAdresse.add(adresseMapper.toEntity(adresse)));
         return ResponseEntity.ok(result);
     }
+
+    @DeleteMapping("/{id}")
+    public String deleteAdresseById(@PathVariable String id) {
+        serviceAdresse.deleteById(Long.parseLong(id));
+        return "Adresse deleted successfully";
+    }
 }
