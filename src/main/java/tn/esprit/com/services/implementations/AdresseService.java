@@ -3,6 +3,7 @@ package tn.esprit.com.services.implementations;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 import tn.esprit.com.entities.Adresse;
+import tn.esprit.com.repositories.AdresseRepository;
 import tn.esprit.com.services.interfaces.IAdresseService;
 
 import java.util.List;
@@ -10,24 +11,27 @@ import java.util.List;
 @Service
 @AllArgsConstructor
 public class AdresseService implements IAdresseService {
+
+    AdresseRepository adresseRepository;
+
     @Override
     public Adresse add(Adresse entity) {
-        return null;
+        return adresseRepository.save(entity);
     }
 
     @Override
     public List<Adresse> saveAll(List<Adresse> entities) {
-        return List.of();
+        return adresseRepository.saveAll(entities);
     }
 
     @Override
     public Adresse findById(Long aLong) {
-        return null;
+        return adresseRepository.findById(aLong).orElse(null);
     }
 
     @Override
     public List<Adresse> findAll() {
-        return List.of();
+        return adresseRepository.findAll();
     }
 
     @Override
