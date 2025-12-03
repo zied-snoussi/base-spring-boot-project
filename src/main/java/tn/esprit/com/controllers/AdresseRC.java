@@ -42,4 +42,11 @@ public class AdresseRC {
         serviceAdresse.deleteById(Long.parseLong(id));
         return "Adresse deleted successfully";
     }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<AdresseDto> updateAdresseById(@RequestBody AdresseDto adresse, @PathVariable Long id) {
+        adresse.setIdAdresse(id);
+        AdresseDto result = adresseMapper.toDTO(serviceAdresse.update(adresseMapper.toEntity(adresse)));
+        return ResponseEntity.ok(result);
+    }
 }

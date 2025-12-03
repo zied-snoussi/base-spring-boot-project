@@ -56,6 +56,6 @@ public class AdresseService implements IAdresseService {
 
     @Override
     public boolean existsById(Long aLong) {
-        return false;
+        return adresseRepository.existsById(aLong);
     }
 }
